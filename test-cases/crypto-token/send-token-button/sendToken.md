@@ -142,3 +142,32 @@ Expected/Intended Results: Po wypełnieniu pól i kliknięciu przycisku "Next" u
 - Sprawdź, czy użytkownik został przeniesiony do następnego etapu
 
 **Oczekiwany rezultat:** Użytkownik zostaje przeniesiony do następnego etapu po kliknięciu przycisku "Next"
+
+## Przypadek: 5k: Sprawdź zmiany stanu konta po wysłaniu kryptowalut
+
+**Warunek wstępny:** Strona z polami input "Send to" i "amount" oraz przyciskiem "Next" jest dostępna, a użytkownik jest zalogowany i ma aktywne konto z pewnym saldem
+
+**Kroki testowe:**
+
+1. Wprowadź dane w pole "Send to" (np. recipient@example.com)
+2. Wprowadź dane w pole "amount" (np. 100)
+3. Kliknij przycisk "Next"
+4. Potwierdź transakcję, jeśli to wymagane (np. klikając przycisk "Confirm")
+5. Sprawdź, czy saldo konta użytkownika zostało zaktualizowane o kwotę podaną w polu "amount" (np. saldo powinno zmniejszyć się o 100)
+
+**Oczekiwany rezultat:** Po wysłaniu kryptowalut saldo konta użytkownika zmienia się o wartość podaną w polu "amount". Na przykład, jeśli początkowe saldo wynosiło 500 i wysłano 100, nowe saldo powinno wynosić 400.
+
+## Przypadek: 5l: Sprawdź, czy wysłane kryptowaluty trafiły do właściwego użytkownika
+
+**Warunek wstępny:** Strona z polami input "Send to" i "amount" oraz przyciskiem "Next" jest dostępna, a użytkownik jest zalogowany i ma aktywne konto z pewnym saldem. Odbiorca posiada również aktywne konto, do którego mogą być wysyłane kryptowaluty.
+
+**Kroki testowe:**
+
+1. Wprowadź dane w pole "Send to" (np. recipient@example.com).
+2. Wprowadź dane w pole "amount" (np. 100).
+3. Kliknij przycisk "Next".
+4. Potwierdź transakcję, jeśli to wymagane (np. klikając przycisk "Confirm").
+5. Sprawdź saldo konta użytkownika, którego adres został podany w polu "Send to", aby upewnić się, że saldo zostało zwiększone o wartość podaną w polu "amount" (np. saldo powinno wzrosnąć o 100).
+
+**Oczekiwany rezultat:** Saldo konta użytkownika, którego adres został podany w polu "Send to", wzrosło o wartość podaną w polu "amount". Na przykład, jeśli konto odbiorcy miało początkowo saldo 300 i wysłano mu 100, nowe saldo powinno wynosić 400.
+
