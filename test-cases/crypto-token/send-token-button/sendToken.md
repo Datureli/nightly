@@ -171,3 +171,18 @@ Expected/Intended Results: Po wypełnieniu pól i kliknięciu przycisku "Next" u
 
 **Oczekiwany rezultat:** Saldo konta użytkownika, którego adres został podany w polu "Send to", wzrosło o wartość podaną w polu "amount". Na przykład, jeśli konto odbiorcy miało początkowo saldo 300 i wysłano mu 100, nowe saldo powinno wynosić 400.
 
+## Przypadek: 5m: Sprawdź, czy wysłanie jednej kryptowaluty nie wpływa na saldo konta w innych kryptowalutach
+
+**Warunek wstępny:** Strona z polami input "Send to" i "amount" oraz przyciskiem "Next" jest dostępna. Użytkownik jest zalogowany i posiada konto z saldami w różnych kryptowalutach.
+
+**Kroki testowe:**
+
+1. **Sprawdź początkowe saldo** w różnych kryptowalutach na koncie użytkownika. Zanotuj salda dla wszystkich kryptowalut (np. Bitcoin, Ethereum, Litecoin).
+2. Wprowadź dane w pole "Send to" (np. recipient@example.com).
+3. Wprowadź dane w pole "amount" dla wybranego rodzaju kryptowalut (np. 100 BTC).
+4. Kliknij przycisk "Next".
+5. Potwierdź transakcję, jeśli to wymagane (np. klikając przycisk "Confirm").
+6. **Sprawdź saldo** konta użytkownika w kryptowalutach, które nie były użyte w transakcji (np. Ethereum i Litecoin). Upewnij się, że salda pozostały bez zmian.
+7. **Sprawdź saldo** konta użytkownika w kryptowalucie, która została użyta w transakcji (np. Bitcoin) i upewnij się, że saldo zostało zaktualizowane o wartość wysłaną.
+
+**Oczekiwany rezultat:** Wysyłając kryptowaluty jednego rodzaju (np. Bitcoin), saldo konta użytkownika w innych kryptowalutach (np. Ethereum, Litecoin) pozostaje bez zmian. Saldo konta w kryptowalucie, która została użyta w transakcji, powinno zostać zaktualizowane o wartość wysłaną.
