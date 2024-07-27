@@ -1,7 +1,7 @@
 ---
 id: #NFTSEARCH001
 title: Sprawdź funkcjonalność paska wyszukiwania NFT
-description: Testy funkcjonalności paska wyszukiwania NFT, w tym poprawność wyników, wydajność i responsywność
+description: Testy funkcjonalności paska wyszukiwania NFT,  w tym poprawność wyników, wydajność i responsywność
 test Scenario: Weryfikacja działania paska wyszukiwania NFT w różnych warunkach
 Test Steps:
   - Wyszukiwanie NFT przy użyciu różnych zapytań
